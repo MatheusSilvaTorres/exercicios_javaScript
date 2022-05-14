@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 15pt Arial;
+            background-color: rgb(115, 201, 129);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()">
+        Interaja
+    </div>
+    <script>
+        // criando as funções dentro do JavaScript (só deixando <div id='area'> no html)
+           /* var a = document.getElementById("area")
+            a.addEventListener('click', clicar)
+            a.addEventListener('mouseenter', entrou)
+            a.addEventListener('mouseout', saiu) */
+        function clicar(){
+            var a = document.getElementById("area")
+            a.style.backgroundColor = 'orange'
+            a.innerText = 'Clicou'
+        }
+
+        function entrou(){
+            var a = document.getElementById("area")
+            a.style.backgroundColor = 'blue'
+            a.innerText = 'entrou'
+        }
+
+        function saiu(){
+            var a = document.getElementById("area")
+            a.style.backgroundColor = 'red'
+            a.innerText = 'saiu'
+        }
+    </script>
+</body>
+</html>

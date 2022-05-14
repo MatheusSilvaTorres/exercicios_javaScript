@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando eventos DOM</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+
+        input{
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+
+        div#resultado{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="texN1" id="texN1"> + 
+    <input type="number" name="texN2" id="texN2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="resultado"> Resultado </div>
+
+    <script>
+        function somar(){
+            var n1 = parseInt(document.getElementById("texN1").value)
+            var n2 = parseInt(document.querySelector("input#texN2").value)
+            var res = document.getElementById("resultado")
+            var soma = n1 + n2
+            res.innerHTML = `A soma vale entre ${n1} e ${n2} vale ${soma}`
+        }
+    </script>
+</body>
+</html>

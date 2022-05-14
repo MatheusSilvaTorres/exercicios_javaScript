@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body{
+            background-color: rgba(4, 4, 5, 0.979);
+            color: white;
+            font: normal 12pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1> Iniciando os estudos com o DOM
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    </h1>
+    <script>
+        // mundo a cor de fundo
+            // var corpo = document.body
+            // corpo.style.background = 'black'
+        // var p1 = document.getElementsByTagName('p')[0]  seleciona o primeiro parágrafo, caso não colocar [0] irá selecionar tudo
+        // window.document.write('Está escrido assim: ' + p1.innerText)  escreve o elemento do primeiro parágrafo
+        // innerText = vem sem formatação innerHTML = vem com formatação
+        // p1.style.color = 'blue'
+
+        // window.document.write('Olá, mundo!') ESCREVE NA TELA
+        // window.document.write(document.characterSet) MOSTRA O SET DE CARACTERES
+        // window.document.write(window.navigator.appName) NOME DO NAVEGADOR
+        // window.document.write(document.URL) ESCREVE A URL DO SITE
+
+        // Selecionando pelo ID
+        /* var d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...' */
+
+        // QuerySelector todo id é representado por = # e toda classe é representada por = .
+        var d = document.querySelector('div#msg')
+        d.style.color = 'blue'
+    </script>
+</body>
+</html>
