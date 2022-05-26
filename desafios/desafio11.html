@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2em;
+        }
+        input{
+            padding: 10px;
+        }
+        .green{
+            background-color: rgba(0, 255, 0, 0.466);
+            color: green;
+        }
+
+        .red{
+            background-color: rgba(204, 42, 42, 0.384);
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ano Bissexto</h1>
+    <div>
+        <input type="number" name="txtn" id="txtn" placeholder="Ano a verificar">
+        <input type="button" value="Verificar" onclick="verificar()">
+    </div>
+
+    <div id="res"></div>
+    <script>
+        function verificar(){
+            var anoVer = parseInt(document.getElementById('txtn').value)
+            let resp = document.getElementById('res')
+            if (anoVer >= 0){
+                resp.innerHTML = ``
+                if(anoVer % 4 == 0 && anoVer % 100 != 0 || anoVer % 400 == 0){
+                    resp.innerHTML = `O ano de ${anoVer} <strong class="green">é bissexto</strong> &#9989`
+                }
+                else{
+                    resp.innerHTML = `O ano de ${anoVer} <strong class="red">não é bissexto</strong> &#10060`
+                }
+            }
+        else{
+            resp.innerHTML = ``
+            resp.innerHTML = `Dados Inválidos`
+        }
+        }
+    </script>
+</body>
+</html>

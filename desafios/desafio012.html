@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço Mudou</title>
+</head>
+<body>
+    <h1>Preço Mudou</h1>
+    <input type="button" value="verificar" onclick="verificar()">
+
+    <div id="res"></div>
+    <script>
+        let ant = prompt('Qual era o preço anterior do produto')
+
+        let agr = prompt('Qual era o preço atual do produto')
+
+        var resp = document.getElementById('res')
+
+        resp.innerHTML = ``
+        resp.innerHTML += `O produto custava R$${ant} e agora custa R#${agr}`
+        if (ant < agr){
+            resp.innerHTML = `Hoje o produto está mais Caro.`
+            resp.innerHTML = `O preço subiu R$${agr-ant} em relação ao preço anterior.`
+            resp.innerHTML = `${`
+        }
+    </script>
+</body>
+</html>
