@@ -24,7 +24,8 @@
         }
 
         .yellow{
-            background-color: yellow;
+            background-color: rgba(255, 255, 0, 0.603);
+            color: yellow;
         }
     </style>
 </head>
@@ -44,15 +45,15 @@
             let resp = document.getElementById('res')
             let media = (nota01 + nota02) / 2
             resp.innerHTML = ``
-            resp.innerHTML += `Com as notas ${nota01} e ${nota02}, <strong>a média é ${media}</strong>`
+            resp.innerHTML += `Com as notas ${nota01} e ${nota02}, <strong>a média é ${media}</strong><br>`
             if (media > 6){ 
                 resp.innerHTML += `Com média acima de 6,0 p aluno está <strong class="green">Aprovado</strong>`
             }
             else if(media >= 3){
-                resp.innerHTML += `Com média acima de 6,0 p aluno está <strong class="red">Aprovado</strong>`
+                resp.innerHTML += `Com média entre 3,0 e de 6,0 p aluno está em <strong class="yellow">Recuperação</strong>`
             }
             else{
-            resp.innerHTML = `Com média acima de 6,0 p aluno está <strong class="yellow">Aprovado</strong>`
+            resp.innerHTML += `Com média abaixo de 3,0 p aluno está <strong class="red">Reprovado</strong>`
             }
         }
     </script>
