@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e depois</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+        }
+        input{
+            padding: 10px;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <input type="number" name="txtn" id="txtn">
+    <input type="button" value="Finalizar" onclick="finalizar()">
+    <div id="res"></div>
+    <script>
+        function finalizar(){
+            var resultado = document.getElementById('res')
+           let num = Number(document.querySelector('input#txtn').value)
+           var sucessor = num + 1
+           var antecessor = num - 1
+        
+           resultado.innerHTML += `<p> O sucessdor de ${num} é ${sucessor}</p>`
+           resultado.innerHTML += `<p> O Antecessor de ${num} é ${antecessor}</p>`
+        }
+    </script>
+</body>
+</html>

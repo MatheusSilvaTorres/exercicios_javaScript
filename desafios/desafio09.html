@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajustar salário</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+        }
+        input{
+            padding: 10px;
+        }
+
+        div > h2{
+            margin: 0px;
+        } 
+
+        div > p{
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste Salárial</h1>
+    <div>
+        <input type="text" id="tnome" placeholder="Digite seu nome"><br>
+        <input type="number" name="txtn" id="txtn" placeholder="Digite seu salário"><br>
+        <input type="number" name="txtn1" id="txtn1" placeholder="Digite o reajuste (%)"><br>
+        <input type="button" value="Calcular" onclick="calcular()">
+    </div>
+    <div id="res"></div>
+
+    <script>
+        function calcular(){
+            let nome = document.querySelector('input#tnome').value
+            let sal = Number(document.getElementById('txtn').value)
+            let desc = Number(document.getElementById('txtn1').value)
+            var resp = document.getElementById('res')
+            if (sal > 0){
+                let des = sal * (desc / 100)
+                resp.innerHTML += ``
+                resp.innerHTML += `<h2> ${nome} recebeu um aumento salarial! <h2><br>`
+                resp.innerHTML += `<p> O salário atual é R$${sal}</p> <br>`
+                resp.innerHTML += `<p> Com um aumento de ${desc}%, o salário vai aumentar R$${des}</p> <br>`
+                resp.innerHTML += `<p>E a partir daí, ${nome} vai passar a ganhar R$${sal+des} </p> <br>`
+            }
+            else{
+                resp.innerHTML = ``
+                resp.innerHTML += `Dados Inválidos!`
+            }
+        }
+    </script>
+</body>
+</html>
